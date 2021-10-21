@@ -1,0 +1,63 @@
+
+/* Padre a Hijo - SELECTOR HIJO */
+/* p > span{
+  color: aqua;
+} */
+
+p > span{
+  color: #afbfff;
+}
+/* Padre a Hijo */
+
+/* Etiqueta Adyacente osea solo el siguiente del h1 - SELECTOR ADYACENTE*/
+h1 + h2{
+  color: green;
+}
+
+/* Aqui afecta a las etiquetas que le sigan, no solo la siguiente - SELECTOR HERMANO */
+.contenedor h1 ~ p{
+  background-color:orange
+}
+
+/* Se identifica de manera especial una etiqueta - SELECTOR DE ATRIBUTO  */
+h1[titulo="curso"]{
+  color: red;
+}
+h1[class="titulo"]{
+  color: yellow;
+}
+
+.parrafo:first-letter{
+  font-size: 2rem;
+}
+
+/* id que tenga como comienzo top */
+span[id|=top]{
+  background-color: teal;
+}
+
+/* el atributo title si contiene la palabra curso */
+a[title~=curso]{
+  color: pink;
+}
+
+a.old:before{
+  content: ":before";
+  color: black
+}
+
+a.old:after{
+  content: ":after";
+  color: black
+}
+
+.linea:first-line{
+  font-size: 2rem;
+}
+
+/* Descendientes directos/ Padre a Hijo, no va al hijo del hijo */
+.lista > section{
+  font-weight: bold;
+  margin: 2px;
+  border: 5px solid red;
+}
